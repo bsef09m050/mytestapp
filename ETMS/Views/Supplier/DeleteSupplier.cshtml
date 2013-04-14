@@ -1,0 +1,52 @@
+﻿@model ETMS.Models.Supplier
+        <div class="grid_4" style="width: 600px;margin-left: 310px">
+				<div class="block-border">
+					<div class="block-header">
+						<h1>Delete Supplier Information</h1><span></span>
+					</div>
+					<form id="validate-form" class="block-content form"  method="post">
+                        <input type="hidden" name="SId" value="@Model.SId">
+						<p class="inline-mini-label">
+							<label for="title" >Name</label>
+                            <input type="text" name="SName" class="required" value="@Model.SName">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title">Company</label>
+                            <input type="text" name="SCompany" class="required" value="@Model.SCompany">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Phone No.</label>
+                            <input type="text" name="SPhoneNo" class="required" value="@Model.SPhoneNo">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Address</label>
+                            <input type="text" name="SAddress" class="required" value="@Model.SAddress">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Type</label>
+                            <input type="text" name="SType" class="required" value="@Model.SType">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Email</label>
+                            <input type="text" name="SEmail" class="required" value="@Model.SEmail">
+						</p>
+                        <p class="inline-mini-label">
+								<label for="post">Details</label>
+								<textarea id="post" name="SDetails" class="required" rows="5" cols="40">@Model.SDetails</textarea>
+					    </p>
+						
+
+						<div class="clear"></div>
+						
+						<!-- Buttons with actionbar  -->
+						<div class="block-actions">
+							<ul class="actions-left">
+								<li><a class="button red" id="reset-validate-form" href="@Href("~/Supplier/ViewSuppliers")">Cancel</a></li>
+							</ul>
+							<ul class="actions-right">
+								<li><input type="submit" class="button" value="Delete" style="width:65px"></li>
+							</ul>
+						</div> <!--! end of #block-actions -->
+					</form>
+				</div>
+			</div>

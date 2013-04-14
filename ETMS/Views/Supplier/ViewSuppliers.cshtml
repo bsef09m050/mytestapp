@@ -1,0 +1,49 @@
+@using ETMS.Models;
+@model IEnumerable<Supplier>
+
+			
+			<div class="grid_12">
+				<h1>View All Suppliers</h1>				
+			</div>
+			
+			<div class="grid_12">
+				<div class="block-border">
+					<div class="block-header">
+						<h1>Suppliers' Information</h1><span></span>
+					</div>
+					<div class="block-content">
+						<table id="table-example" class="table">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Company</th>
+									<th>Phone No</th>
+									<th>Address</th>
+                                    <th>Type</th>
+									<th>Email</th>
+                                    <th>Action</th>                                   
+								</tr>
+							</thead>
+							<tbody>
+                                @foreach (var row in Model) {
+								<tr class="gradeX">
+									<td>@row.SName</td>
+									<td>@row.SCompany</td>
+									<td>@row.SPhoneNo</td>
+                                    <td>@row.SAddress</td>
+                                    <td>@row.SType</td>
+                                    <td>@row.SEmail</td>                                    
+									<td class="center"><a href="@Href("~/Supplier/ViewSupplier",@row.SId)">View</a> / <a href="@Href("~/Supplier/UpdateSupplierInfo",@row.SId)">Update</a> / <a href="@Href("~/Supplier/DeleteSupplier",@row.SId)">Delete</a></td>
+									
+								</tr>}		
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			
+
+
+ 

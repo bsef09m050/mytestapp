@@ -1,0 +1,56 @@
+﻿@model ETMS.Models.Client
+        <div class="grid_4" style="width: 400px;margin-left: 310px">
+				<div class="block-border">
+					<div class="block-header">
+						<h1 style="margin-left:70px" >Client Information</h1><span></span>
+					</div>
+					<form id="validate-form" class="block-content form" action="" method="post">
+						<p class="inline-mini-label">
+							<label for="title" >Name    : </label>
+                            <label style="margin-left:20px" id="fname">@Model.CName</label>
+                            <br />
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title">Project  : </label>
+                            <label style="margin-left:20px" id="pname">@Model.CProject</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Company : </label>
+                            <label style="margin-left:20px" id="cname">@Model.CCompany</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >CNIC    : </label>
+                            <label style="margin-left:20px" id="cnic">@Model.CCNIC</label>
+                            <br />
+						</p>
+                        <p class="inline-mini-label">
+							<label  for="title" >Address : </label>
+                            <label style="margin-left:20px" id="adress">@Model.CAddress</label>
+                            <br />
+                        </p>
+                        <p class="inline-mini-label">
+							<label  for="title" >Phone No: </label>
+                            <label style="margin-left:20px" id="phone">@Model.CPhoneNo</label>
+                            <br />
+                        </p>
+                        <p class="inline-mini-label">
+							<label  for="title" >Email   : </label>
+                            <label style="margin-left:20px" id="email">@Model.CEmail</label>
+                            <br />
+                        </p>
+                        <div class="clear"></div>
+						
+						<!-- Buttons with actionbar  -->
+						<div class="block-actions">
+							<ul class="actions-right">
+								<li><a class="button red" id="reset-validate-form" href="@Href("~/Client/ViewClients")">OK</a></li>
+							</ul>
+							
+						</div> <!--! end of #block-actions -->
+					</form>
+				</div>
+			</div>

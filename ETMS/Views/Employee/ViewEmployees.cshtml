@@ -1,0 +1,51 @@
+﻿		@using ETMS.Models;
+        @model IEnumerable<Employee>
+			<div class="grid_12">
+				<h1>View All Employees</h1>
+				
+			</div>
+			
+			<div class="grid_12">
+				<div class="block-border">
+					<div class="block-header">
+						<h1>Employees' Information</h1><span></span>
+					</div>
+					<div class="block-content">
+						<table id="table-example" class="table">
+							<thead>
+								<tr>
+									<th>First Name</th>
+									<th>Last Name</th>
+									<th>ID</th>
+									<th>Email</th>
+                                    <th>CNIC</th>
+									<th>Address</th>
+                                    <th>DeviceID</th>
+                                    <th>Department</th>
+                                    <th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+                                @foreach (var row in Model) {
+								<tr class="gradeX">
+									<td>@row.FirstName</td>
+									<td>@row.LastName</td>
+									<td>@row.EmpID</td>
+                                    <td>@row.Email</td>
+                                    <td>@row.CNIC</td>
+                                    <td>@row.Address</td>
+                                    <td>@row.DeviceID</td>
+                                    <td>@row.Department</td>
+									<td class="center"><a href='@Href("~/Employee/ViewEmployee",row.Id)'>View</a> / <a href='@Href("~/Employee/UpdateEmployeeInfo",row.Id)'>Update</a> / <a href='@Href("~/Employee/DeleteEmployee",row.Id)'>Delete</a></td>
+									
+								</tr>			}			
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			
+
+
+ 

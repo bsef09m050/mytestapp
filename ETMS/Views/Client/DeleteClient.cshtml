@@ -1,0 +1,51 @@
+﻿
+        @model ETMS.Models.Client
+        <div class="grid_4" style="width: 600px;margin-left: 310px">
+				<div class="block-border">
+					<div class="block-header">
+						<h1>Delete Client Information</h1><span></span>
+					</div>
+					<form id="validate-form" class="block-content form" action="" method="post">
+                        <input type="hidden" name="CId" value="@Model.CId"/>
+						<p class="inline-mini-label">
+							<label for="title" >Name</label>
+                            <input type="text" name="CName" class="required" value="@Model.CName">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title">Project</label>
+                            <input type="text" name="CProject" class="required" value="@Model.CProject">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Company</label>
+                            <input type="text" name="CCompany" class="required" value="@Model.CCompany">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >CNIC</label>
+                            <input type="text" name="CCNIC" class="required" value="@Model.CCNIC">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Address</label>
+                            <input type="text" name="CAddress" class="required" value="@Model.CAddress">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Phone No.</label>
+                            <input type="text" name="CPhoneNo" class="required" value="@Model.CPhoneNo">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Email</label>
+                            <input type="text" name="CEmail" class="required" value="@Model.CEmail">
+						</p>
+                        <div class="clear"></div>
+						
+						<!-- Buttons with actionbar  -->
+						<div class="block-actions">
+							<ul class="actions-left">
+								<li><a class="button red" id="reset-validate-form" href="@Href("~/Client/ViewClients")">Cancel</a></li>
+							</ul>
+							<ul class="actions-right">
+								<li><input type="submit" class="button" value="Delete" style="width:65px"></li>
+							</ul>
+						</div> <!--! end of #block-actions -->
+					</form>
+				</div>
+			</div>

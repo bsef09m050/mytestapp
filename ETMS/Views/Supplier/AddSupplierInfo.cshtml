@@ -1,0 +1,69 @@
+﻿
+
+<div class="grid_4" style="width: 605px;margin-left: 90px">
+				<div class="block-border">
+					<div class="block-header">
+						<h1>Add Supplier Information</h1><span></span>
+					</div>
+					<form id="validate-form" class="block-content form" method="post">
+						<p class="inline-mini-label">
+							<label for="title" >Name</label>
+                            <input type="text" name="SName" class="required">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title">Company</label>
+                            <input type="text" name="SCompany" class="required">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Phone No.</label>
+                            <input type="text" name="SPhoneNo" class="required">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Address</label>
+                            <input type="text" name="SAddress" class="required">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Type</label>
+                            <input type="text" name="SType" class="required">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Email</label>
+                            <input type="text" name="SEmail" class="required">
+						</p>
+                        <p class="inline-mini-label">
+								<label for="post">Details</label>
+								<textarea id="post" name="SDetails" class="required" rows="5" cols="40"></textarea>
+							</p>
+						
+
+						<div class="clear"></div>
+						
+						<!-- Buttons with actionbar  -->
+						<div class="block-actions">
+							<ul class="actions-left">
+								<li><a class="button red" id="reset-validate-form" href="@Href("~/Home/DashBoard")">Cancel</a></li>
+							</ul>
+							<ul class="actions-right">
+								<li><input type="submit" class="button" value="Save" style="width:65px"></li>
+							</ul>
+						</div> <!--! end of #block-actions -->
+					</form>
+				</div>
+			</div>
+
+			<div class="grid_4" style="width: 420px">
+				<div class="block-border">
+					<div class="block-header">
+						<h1>Overview-List</h1><span></span>
+					</div>
+					<div class="block-content">
+						<div class="alert info no-margin top">You have add 12 new Suppliers in this month.</div>
+						<ul class="overview-list">
+							<li><a href="javascript:void(0);"><span>8262</span> Total Suppliers</a></li>
+							<li><a href="javascript:void(0);"><span>21</span> Today Added Suppliers</a></li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>			
+			

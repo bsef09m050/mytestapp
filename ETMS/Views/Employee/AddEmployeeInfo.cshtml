@@ -1,0 +1,90 @@
+﻿
+				<div class="grid_4" style="width: 605px;margin-left: 90px">
+				<div class="block-border">
+					<div class="block-header">
+						<h1>Add Employee Information</h1><span></span>
+					</div>
+					<form id="validate-form" class="block-content form" action="/Employee/AddEmployeeinfo" method="post">
+						<p class="inline-mini-label">
+							<label for="title" >FirstName</label>
+                            <input type="text" name="FirstName" class="required">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title">Last Name</label>
+                            <input type="text" name="LastName" class="required">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >CNIC</label>
+                            <input type="text" name="CNIC" class="required">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >ID</label>
+                            <input type="text" name="EmpID" class="required">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Address</label>
+                            <input type="text" name="Address" class="required">
+						</p>                        
+                        <p class="inline-mini-label">
+							<label for="title" >Email</label>
+                            <input type="text" name="Email" class="required">
+						</p>
+
+                        <p class="inline-mini-label">
+							<label for="title" >Device ID</label>
+                            <input type="text" name="DeviceID" class="required">
+						</p>
+                        
+                        <p class="inline-mini-label">
+							<label for="category">Dep</label>
+							<select name="Department" id="category" >
+								<option>Developer</option>
+								<option>Quality Assurance</option>
+								<option>Humane Resource</option>
+                                <option>Finance</option>
+                                <option>Accounts</option>
+                                <option>Client Relationship Communication</option>
+
+							</select>
+						</p>
+						<p class="inline-mini-label">
+								<label for="post">Skills</label>
+								<textarea id="post" name="Skills" class="required" rows="5" cols="40"></textarea>
+						</p>
+						
+
+						<div class="clear"></div>
+						
+						<!-- Buttons with actionbar  -->
+						<div class="block-actions">
+							<ul class="actions-left">
+								<li><a class="button red" id="reset-validate-form" href="@Href("~/Home/DashBoard")">Cancel</a></li>
+							</ul>
+							<ul class="actions-right">
+								<li><input type="submit" class="button" value="Save" style="width:65px"></li>
+							</ul>
+						</div> <!--! end of #block-actions -->
+					</form>
+				</div>
+			</div>
+
+			<div class="grid_4" style="width: 420px">
+				<div class="block-border">
+					<div class="block-header">
+						<h1>Overview-List</h1><span></span>
+					</div>
+					<div class="block-content">
+						<div class="alert info no-margin top">You have add 12 new employees in this month.</div>
+						<ul class="overview-list">
+							<li><a href="javascript:void(0);"><span>8262</span> Total Employees</a></li>
+							<li><a href="javascript:void(0);"><span>21</span> Today Added Employees</a></li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="clear height-fix"></div>
+
+		</div></div> <!--! end of #main-content -->
+ 

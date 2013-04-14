@@ -1,0 +1,75 @@
+﻿@using ETMS.Models;
+@model IEnumerable<Employee>
+<script type="text/javascript">
+    
+  //  $(document).ready(function () {
+        function GetList() {
+            var v=document.getElementById('name').value;
+            $.ajax({
+                url: "http://localhost:4000/api/GetEmployees/GetMatchedEmp?json=true&name="+v,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    var output = "<ul>";
+                    for (var i in data) {
+                        output += "<li>" + data[i].FirstName +"</li>";                        
+                    }
+                    output += "</ul>";
+                   
+                    document.getElementById('placeholder').innerHTML = output;
+                },
+                error: function (x, y, z) {
+                    alert(x + '\n' + y + '\n' + z);
+                }
+            });            
+           
+           // alert(v);
+       }
+   // });
+  </script>
+               
+<div class="grid_4" style="margin-left: 290px;width: 520px">
+				<div class="block-border">
+					<div class="block-header">
+				    <h1>Provide an Observation</h1><span></span>
+					</div>
+                    
+					<form id="validate-form_PO" class="block-content form" method="post" action="/Home/ProvideObservation" >
+						<p class="inline-mini-label">
+							<label for="title">Device ID</label>
+							<input type="text" name="devID" class="required" id="listID">
+						</p>
+                        <div id="result"></div>
+                        <p class="inline-mini-label">
+							<label for="title">Name</label>
+							<input type="text" name="name" id="name" class="required" onkeypress="GetList()">
+						</p>
+
+                        <p class="inline-mini-label">
+							<label for="title">Subject</label>
+							<input type="text" name="title" class="required">
+						</p>
+						
+						<p class="inline-mini-label">
+								<label for="post">Message</label>
+								<textarea id="post" name="message" class="required" rows="5" cols="40"></textarea>
+						</p>
+						
+
+						<div class="clear"></div>
+						
+						<!-- Buttons with actionbar  -->
+						<div class="block-actions">
+							<ul class="actions-left">
+								<li><a class="button red" id="reset-validate-form" href="javascript:void(0)">Cancel</a></li>
+							</ul>
+							<ul class="actions-right">
+								<li><input type="submit" class="button" value="Send" ></li>
+							</ul>
+						</div> <!--! end of #block-actions -->
+					</form>
+				</div>
+                
+			</div>
+<div id="placeholder"></div>
+   

@@ -1,0 +1,53 @@
+﻿@using ETMS.Models;
+@model IEnumerable<Project>
+
+<div id="main-content">
+			<div class="container_12">
+			
+			<div class="grid_12">
+				
+			</div>
+			
+			<div class="grid_12">
+				<div class="block-border">
+					<div class="block-header">
+						<h1>Projects' Information</h1><span></span>
+					</div>
+					<div class="block-content">
+						<table id="table-example" class="table">
+							<thead>
+								<tr>
+									<th>Title</th>
+									<th>Start Date</th>
+									<th>End Date</th>
+									<th>Team Lead</th>
+                                    <th>Category</th>
+                                    <th>Action</th>
+                                    
+								</tr>
+							</thead>
+							<tbody>
+								
+                                
+                                 @foreach (var row in Model) {
+								<tr class="gradeA">
+									<td>@row.PName</td>
+									<td>@row.PStartDate</td>
+                                    <td>@row.PEndDate</td>
+                                    <td>@row.PTeamLead</td>
+									<td>@row.PCategory</td>
+                                    
+                                    
+                                    <td class="center"><a href='@Href("~/Project/ViewProject",@row.PId)'>View</a> / <a href='@Href("~/Project/UpdateProjectInfo",@row.PId)'>Update</a> / <a href='@Href("~/Project/DeleteProject",@row.PId)'>Delete</a></td>
+								</tr>}
+																
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<div class="clear height-fix"></div>
+
+		</div></div> <!--! end of #main-content -->

@@ -1,0 +1,68 @@
+﻿@model ETMS.Models.Employee
+
+            <div class="grid_4" style="width: 600px;margin-left: 310px">
+				<div class="block-border">
+					<div class="block-header">
+						<h1 style="margin-left:70px"> Employee Information</h1><span></span>
+					</div>
+					<form id="validate-form" class="block-content form" action="" method="post">
+						<p class="inline-mini-label">
+							<label for="title" >FirstName</label>
+                            <label style="margin-left:20px" id="fname">@Model.FirstName</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title">Last Name</label>
+                            <label style="margin-left:20px" id="lname">@Model.LastName</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >CNIC</label>
+                            <label style="margin-left:20px" id="cnic">@Model.CNIC</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >ID</label>
+                            <label style="margin-left:20px" id="ID">@Model.EmpID</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Address</label>
+                            <label style="margin-left:20px" id="address">@Model.Address</label>
+                            <br />
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Email</label>
+                            <label style="margin-left:20px" id="email">@Model.Email</label>
+                            <br />
+                            
+						</p>
+                        
+                        <p class="inline-mini-label">
+							<label for="category">Department</label>
+							<label style="margin-left:20px" id="fname">@Model.Department</label>
+                            <br />
+						</p>
+						<p class="inline-mini-label">
+								<label for="post">Skills</label>
+								<label style="margin-left:20px" id="skills">@Model.Skills</label>
+                            <br />
+							</p>
+						</p>
+
+						<div class="clear"></div>
+						
+						<!-- Buttons with actionbar  -->
+						<div class="block-actions">
+							<ul class="actions-right">
+								<li><a class="button red" id="reset-validate-form" href="@Href("~/Employee/ViewEmployees")">OK</a></li>
+							</ul>
+							
+						</div> <!--! end of #block-actions -->
+					</form>
+				</div>
+			</div>

@@ -1,0 +1,48 @@
+﻿
+    @model ETMS.Models.Project
+            <div class="grid_4" style="width: 600px;margin-left: 310px">
+				<div class="block-border">
+					<div class="block-header">
+						<h1 style="margin-left:70px">Project Information</h1><span></span>
+					</div>
+					<form id="validate-form" class="block-content form" action="DashBoard.cshtml" method="post">
+						<p class="inline-mini-label">
+							<label for="title" >Title</label>
+                            <label style="margin-left:20px" id="title">@Model.PName</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title">Start Date</label>
+                            <label style="margin-left:20px" id="sdate">@Model.PStartDate</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >End Date</label>
+                            <label style="margin-left:20px" id="edate">@Model.PEndDate</label>
+                            <br />
+                        </p>
+                        <p class="inline-mini-label">
+							<label for="title" >Team lead</label>
+                            <label style="margin-left:20px" id="lead">@Model.PTeamLead</label>
+                            <br />
+                        </p>
+                        <p class="inline-mini-label">
+							<label for="category">Category</label>
+							<label style="margin-left:20px" id="category">@Model.PCategory</label>
+                            <br />
+						</p>
+                        
+						<div class="clear"></div>
+						
+						<!-- Buttons with actionbar  -->
+						<div class="block-actions">
+							<ul class="actions-right">
+								<li><a class="button red" id="reset-validate-form" href="@Href("~/Project/ViewProjects")">OK</a></li>
+							</ul>
+							
+						</div> <!--! end of #block-actions -->
+					</form>
+				</div>
+			</div>

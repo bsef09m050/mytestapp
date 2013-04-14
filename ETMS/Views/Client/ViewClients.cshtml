@@ -1,0 +1,43 @@
+﻿	
+@using ETMS.Models;
+@model IEnumerable<Client>
+			
+			<div class="grid_12">
+				<div class="block-border">
+					<div class="block-header">
+						<h1>Clients' Information</h1><span></span>
+					</div>
+					<div class="block-content">
+						<table id="table-example" class="table">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Project</th>
+									<th>Company</th>
+									<th>Email</th>                                    
+                                    <th>CNIC</th>
+									<th>Address</th>
+                                    <th>Phone No.</th>
+                                    <th>Action</th>
+                                    
+								</tr>
+							</thead>
+							<tbody>								
+								@foreach (var row in Model) {
+								<tr class="gradeA">
+									<td>@row.CName</td>
+									<td>@row.CProject</td>
+                                    <td>@row.CCompany</td>
+									<td>@row.CEmail</td>
+                                    <td>@row.CCNIC</td>
+                                    <td>@row.CAddress</td>
+                                    <td>@row.CPhoneNo</td>                                    
+                                    <td class="center"><a href="@Href("~/Client/ViewClient",row.CId)">View</a> / <a href="@Href("~/Client/UpdateClientInfo",row.CId)">Update</a> / <a href="@Href("~/Client/DeleteClient",row.CId)">Delete</a></td>
+								</tr>}
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		

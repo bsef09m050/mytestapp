@@ -1,0 +1,52 @@
+﻿
+
+        <div class="grid_4" style="width: 600px;margin-left: 310px">
+				<div class="block-border">
+					<div class="block-header">
+						<h1>Delete Supplier Information</h1><span></span>
+					</div>
+					<form id="validate-form" class="block-content form" action="DashBoard.cshtml" method="post">
+						<p class="inline-mini-label">
+							<label for="title" >Name</label>
+                            <input type="text" name="fname" class="required" value="Supplier name">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title">Company</label>
+                            <input type="text" name="lname" class="required" value="company">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Phone No.</label>
+                            <input type="text" name="cnic" class="required" value="Phone No.">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Address</label>
+                            <input type="text" name="id" class="required" value="Address">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Type</label>
+                            <input type="text" name="adress" class="required" value="Type">
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Email</label>
+                            <input type="text" name="email" class="required" value="Email">
+						</p>
+                        <p class="inline-mini-label">
+								<label for="post">Details</label>
+								<textarea id="post" name="skills" class="required" rows="5" cols="40"></textarea>
+							</p>
+						</p>
+
+						<div class="clear"></div>
+						
+						<!-- Buttons with actionbar  -->
+						<div class="block-actions">
+							<ul class="actions-left">
+								<li><a class="button red" id="reset-validate-form" href=@Href("DeleteInfo.cshtml")>Cancel</a></li>
+							</ul>
+							<ul class="actions-right">
+								<li><input type="submit" class="button" value="Delete" style="width:65px"></li>
+							</ul>
+						</div> <!--! end of #block-actions -->
+					</form>
+				</div>
+			</div>

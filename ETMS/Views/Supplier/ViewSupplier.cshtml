@@ -1,0 +1,62 @@
+﻿
+@model ETMS.Models.Supplier
+        <div class="grid_4" style="width: 600px;margin-left: 310px">
+				<div class="block-border">
+					<div class="block-header">
+						<h1 style="margin-left:70px">Supplier Information</h1><span></span>
+					</div>
+					<form id="validate-form" class="block-content form" action="" method="post">
+						<p class="inline-mini-label">
+							<label for="title" >Name</label>
+                            <label style="margin-left:20px" id="name">@Model.SName</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title">Company</label>
+                             <label style="margin-left:20px" id="company">@Model.SCompany</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Phone No.</label>
+                             <label style="margin-left:20px" id="phone">@Model.SCompany</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Address</label>
+                             <label style="margin-left:20px" id="address">@Model.SAddress</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Type</label>
+                             <label style="margin-left:20px" id="type">@Model.SType</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+							<label for="title" >Email</label>
+                             <label style="margin-left:20px" id="email">@Model.SEmail</label>
+                            <br />
+                            
+						</p>
+                        <p class="inline-mini-label">
+								<label for="post">Details</label>
+								<p id="details" style="margin-left:20px">@Model.SDetails</p>
+		                         <br />					
+						</p>
+
+						<div class="clear"></div>
+						
+						<!-- Buttons with actionbar  -->
+						<div class="block-actions">
+							<ul class="actions-right">
+								<li><a class="button red" id="reset-validate-form" href="@Href("~/Supplier/ViewSuppliers")">OK</a></li>
+							</ul>
+							
+						</div> <!--! end of #block-actions -->
+					</form>
+				</div>
+			</div>

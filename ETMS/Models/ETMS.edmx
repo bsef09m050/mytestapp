@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Database1Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="Client" EntityType="Database1Model.Store.Client" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employee" EntityType="Database1Model.Store.Employee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Project" EntityType="Database1Model.Store.Project" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SMS" EntityType="Database1Model.Store.SMS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Supplier" EntityType="Database1Model.Store.Supplier" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Track" EntityType="Database1Model.Store.Track" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="CId" />
+          </Key>
+          <Property Name="CId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CProject" Type="nvarchar" MaxLength="50" />
+          <Property Name="CCompany" Type="nvarchar" MaxLength="50" />
+          <Property Name="CCNIC" Type="nvarchar" MaxLength="50" />
+          <Property Name="CAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="CPhoneNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="CEmail" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CNIC" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="Skills" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeviceID" Type="nvarchar" MaxLength="250" />
+          <Property Name="EmpID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="PId" />
+          </Key>
+          <Property Name="PId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PStartDate" Type="datetime" />
+          <Property Name="PEndDate" Type="datetime" />
+          <Property Name="PTeamLead" Type="nvarchar" MaxLength="50" />
+          <Property Name="PCategory" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SMS">
+          <Key>
+            <PropertyRef Name="MId" />
+          </Key>
+          <Property Name="MId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MContactNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="MDateTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="MType" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="SId" />
+          </Key>
+          <Property Name="SId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SPhoneNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="SCompany" Type="nvarchar" MaxLength="50" />
+          <Property Name="SAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="SType" Type="nvarchar" MaxLength="50" />
+          <Property Name="SEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="SDetails" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Track">
+          <Key>
+            <PropertyRef Name="TId" />
+          </Key>
+          <Property Name="TId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TContactNo" Type="varchar" MaxLength="50" />
+          <Property Name="TCallType" Type="nvarchar" MaxLength="50" />
+          <Property Name="TCallDuration" Type="nvarchar" MaxLength="50" />
+          <Property Name="TDateTime" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DatabaseEntities1" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Clients" EntityType="Database1Model.Client" />
+          <EntitySet Name="Employees" EntityType="Database1Model.Employee" />
+          <EntitySet Name="Projects" EntityType="Database1Model.Project" />
+          <EntitySet Name="SMS" EntityType="Database1Model.SM" />
+          <EntitySet Name="Suppliers" EntityType="Database1Model.Supplier" />
+          <EntitySet Name="Tracks" EntityType="Database1Model.Track" />
+        </EntityContainer>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="CId" />
+          </Key>
+          <Property Name="CId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CProject" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CCompany" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CCNIC" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CPhoneNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CEmail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CNIC" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Department" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Skills" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DeviceID" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="EmpID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="PId" />
+          </Key>
+          <Property Name="PId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PStartDate" Type="DateTime" Precision="3" />
+          <Property Name="PEndDate" Type="DateTime" Precision="3" />
+          <Property Name="PTeamLead" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PCategory" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SM">
+          <Key>
+            <PropertyRef Name="MId" />
+          </Key>
+          <Property Name="MId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MContactNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MDateTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="SId" />
+          </Key>
+          <Property Name="SId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="SName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SPhoneNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SCompany" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SEmail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SDetails" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Track">
+          <Key>
+            <PropertyRef Name="TId" />
+          </Key>
+          <Property Name="TId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TContactNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TCallType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TCallDuration" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TDateTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="DatabaseEntities1">
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="Database1Model.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="CId" ColumnName="CId" />
+                <ScalarProperty Name="CName" ColumnName="CName" />
+                <ScalarProperty Name="CProject" ColumnName="CProject" />
+                <ScalarProperty Name="CCompany" ColumnName="CCompany" />
+                <ScalarProperty Name="CCNIC" ColumnName="CCNIC" />
+                <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+                <ScalarProperty Name="CPhoneNo" ColumnName="CPhoneNo" />
+                <ScalarProperty Name="CEmail" ColumnName="CEmail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="Database1Model.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Skills" ColumnName="Skills" />
+                <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projects">
+            <EntityTypeMapping TypeName="Database1Model.Project">
+              <MappingFragment StoreEntitySet="Project">
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="PName" ColumnName="PName" />
+                <ScalarProperty Name="PStartDate" ColumnName="PStartDate" />
+                <ScalarProperty Name="PEndDate" ColumnName="PEndDate" />
+                <ScalarProperty Name="PTeamLead" ColumnName="PTeamLead" />
+                <ScalarProperty Name="PCategory" ColumnName="PCategory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SMS">
+            <EntityTypeMapping TypeName="Database1Model.SM">
+              <MappingFragment StoreEntitySet="SMS">
+                <ScalarProperty Name="MId" ColumnName="MId" />
+                <ScalarProperty Name="MContactNo" ColumnName="MContactNo" />
+                <ScalarProperty Name="MDateTime" ColumnName="MDateTime" />
+                <ScalarProperty Name="MType" ColumnName="MType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suppliers">
+            <EntityTypeMapping TypeName="Database1Model.Supplier">
+              <MappingFragment StoreEntitySet="Supplier">
+                <ScalarProperty Name="SId" ColumnName="SId" />
+                <ScalarProperty Name="SName" ColumnName="SName" />
+                <ScalarProperty Name="SPhoneNo" ColumnName="SPhoneNo" />
+                <ScalarProperty Name="SCompany" ColumnName="SCompany" />
+                <ScalarProperty Name="SAddress" ColumnName="SAddress" />
+                <ScalarProperty Name="SType" ColumnName="SType" />
+                <ScalarProperty Name="SEmail" ColumnName="SEmail" />
+                <ScalarProperty Name="SDetails" ColumnName="SDetails" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tracks">
+            <EntityTypeMapping TypeName="Database1Model.Track">
+              <MappingFragment StoreEntitySet="Track">
+                <ScalarProperty Name="TId" ColumnName="TId" />
+                <ScalarProperty Name="TContactNo" ColumnName="TContactNo" />
+                <ScalarProperty Name="TCallType" ColumnName="TCallType" />
+                <ScalarProperty Name="TCallDuration" ColumnName="TCallDuration" />
+                <ScalarProperty Name="TDateTime" ColumnName="TDateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
